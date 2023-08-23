@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/cbde982cf0.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- section -->
+    <section
+      class="card-container flex justify-center items-center w-screen m-0 h-screen bg-zinc-700"
+    >
+      <div class="circle"></div>
+      <div class="circle2"></div>
+      <!-- modal container-->
+      <div
+        class="modal-container transition-all duration-1000 ease-in-out w-screen h-screen flex justify-center items-center absolute"
+        id="modal-content"
+      >
+        <!--  modal -->
+        <div
+          class="modal w-[400px] bg-custom p-6 rounded-lg flex gap-2 flex-col"
+        >
+          <div class="text-2xl flex justify-between items-center">
+            <div>Share Link :</div>
+            <!-- modal close button -->
+            <div class="w-[50px] h-[50px]" id="modal-close">
+              <img
+                class="cursor-pointer"
+                src="images/cross.svg"
+                alt="cross img"
+              />
+            </div>
+          </div>
+          <div class="w-full h-1 bg-slate-400 rounded-lg"></div>
+          <!-- modal cta buttons -->
+          <div
+            class="modal-cta text-4xl w-full py-2 px-4 flex items-center justify-evenly"
+          >
+            <div
+              class="hover:bg-custom transition-all duration-700 w-[50px] h-[50px] flex items-center justify-center rounded-full"
+            >
+              <a href=""
+                ><i class="fa-brands fa-facebook" style="color: #1064f4"></i
+              ></a>
+            </div>
+            <div
+              class="hover:bg-custom transition-all duration-700 w-[50px] h-[50px] flex items-center justify-center rounded-full"
+            >
+              <a href=""
+                ><i class="fa-brands fa-instagram" style="color: #e44e4e"></i
+              ></a>
+            </div>
+            <div
+              class="hover:bg-custom transition-all duration-700 w-[50px] h-[50px] flex items-center justify-center rounded-full"
+            >
+              <a href=""
+                ><i class="fa-brands fa-twitter" style="color: #257dd0"></i
+              ></a>
+            </div>
+            <div
+              class="hover:bg-custom transition-all duration-700 w-[50px] h-[50px] flex items-center justify-center rounded-full"
+            >
+              <a href="https://telegram.me/dude432"
+                ><i class="fa-brands fa-telegram" style="color: #5291ff"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- user card -->
+      <div
+        class="user-card flex flex-col items-center gap-5 text-white bg-custom px-10 py-8 rounded-lg"
+      >
+        <!-- user img container-->
+        <div
+          class="user-img-container w-44 h-44 rounded-full overflow-hidden group"
+        >
+          <img
+            src="images/avatar.jpg"
+            alt=""
+            class="user-img object-cover group-hover:scale-110 transition-all duration-300 ease-in-out"
+          />
+        </div>
+        <!-- user details -->
+        <div
+          class="user-name text-4xl font-extrabold hover:text-slate-200 transition-all duration-300 ease-in-out"
+        >
+          Vineet Singh
+        </div>
+        <div class="user-desc">Student of Graphic Era Hill</div>
+        <!-- cta buttons -->
+        <div class="cta-buttons">
+          <button
+            class="border-2 border-slate-400 py-2 px-4 rounded-md hover:bg-zinc-800 hover:border-slate-300 hover:text-slate-300"
+            id="modal-open"
+          >
+            Share My Profile
+          </button>
+          <button
+            class="border-2 border-slate-400 py-2 px-4 rounded-md hover:bg-zinc-800 hover:border-slate-300 hover:text-slate-300"
+          >
+            Follow Me
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

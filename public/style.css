@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@keyframes flow {
+  from {
+    transform: translate(0, 0);
+    scale: 0.92;
+  }
+  to {
+    transform: translate(80px, 25px);
+    scale: 1;
+  }
+}
+@keyframes flow2 {
+  from {
+    transform: translate(0, 0);
+    scale: 0.92;
+  }
+  to {
+    transform: translate(-80px, -25px);
+    scale: 1;
+  }
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+section {
+  position: relative;
+}
+
+#modal-content::before {
+  content: "";
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.blur {
+  filter: blur(2px);
+}
+.modal {
+  z-index: 999;
+  background-color: rgba(10, 9, 9, 0.67);
+  color: white;
+}
+#modal-close {
+  filter: invert(90);
+}
+#modal-content {
+  z-index: 999;
+  transform: translate(0, -100%);
+  scale: 0;
+}
+#modal-content.show {
+  transform: translate(0, 0);
+  scale: 1;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  background-image: linear-gradient(
+    50deg,
+    hsl(240deg 100% 20%) 0%,
+    hsl(289deg 100% 21%) 1%,
+    hsl(315deg 100% 27%) 11%,
+    hsl(329deg 100% 36%) 36%,
+    hsl(337deg 100% 43%) 63%,
+    hsl(357deg 91% 59%) 79%,
+    hsl(357deg 91% 59%) 79%,
+    hsl(17deg 100% 59%) 89%,
+    hsl(34deg 100% 53%) 95%,
+    hsl(45deg 100% 50%) 98%,
+    hsl(55deg 100% 50%) 100%
+  );
+  border-radius: 9999px;
+  box-shadow: 0 0 50px 4px hsl(337deg 100% 43%);
+  position: absolute;
+  left: 400px;
+  top: 20px;
+  z-index: 0;
+  animation: flow 10s infinite alternate;
+}
+.circle2 {
+  width: 200px;
+  height: 200px;
+  background-image: linear-gradient(
+    50deg,
+    hsl(271deg 97% 53%) 0%,
+    hsl(267deg 96% 59%) 1%,
+    hsl(264deg 95% 63%) 3%,
+    hsl(262deg 93% 66%) 7%,
+    hsl(261deg 90% 68%) 13%,
+    hsl(259deg 85% 70%) 23%,
+    hsl(260deg 65% 59%) 53%,
+    hsl(260deg 58% 53%) 70%,
+    hsl(260deg 59% 47%) 86%,
+    hsl(261deg 71% 41%) 100%
+  );
+  border-radius: 9999px;
+  box-shadow: 0 0 30px -3px hsl(259deg 85% 70%) ;
+  position: absolute;
+  right: 400px;
+  bottom: 20px;
+  z-index: 0;
+  animation: flow2 8s infinite alternate ease-in-out;
+}
+.user-card {
+  z-index: 99;
+}
+.user-img-container { 
+  box-shadow: 0 0 10px 2px rgba(65, 64, 64, 0.9);
+
+}
